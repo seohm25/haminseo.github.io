@@ -1,0 +1,63 @@
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>CSS Letterform Demo</title>
+    <style>
+      .parent {
+          position: absolute;
+          display: flex;
+          width: 300px;
+          height: 300px;
+          border: solid 3px black;
+          flex-direction: column;
+          justify-content: space-between;
+      }
+      .child {
+        height: 20px;
+        background-color: green;
+        /* margin-bottom: 170px; */
+      }
+      .vertical {
+        width: 20px;
+        height: 300px;
+        position: absolute;
+      }
+      #letter1 {
+          top: 30px;
+          left: 100px;
+      }
+      #letter2 {
+          top: 200px;
+          left: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="letter1" class="parent">
+      <div class="child vertical"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+    <div id="letter2" class="parent">
+      <div class="child vertical"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+  </body>
+</html>
+Collapse
+
+
+
+
+
+
+
+
+
+
+
+
