@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>exercise04</title>
+    <title>exercise05</title>
     <style>
 
 body {
@@ -255,10 +255,6 @@ body {
     );
 }
 
-    
-
-
-
       #letter1 {
           top: 30px;
           left: 100px;
@@ -270,12 +266,19 @@ body {
       background-color: #eaff00; 
       border-width: 30px;
       clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+
+        /*animation*/
+        animation-name:myAnimation;
+        animation-duration:3s;
+        animation-iteration-count: infinite;
       }
 
       #letter2 {
           top: 200px;
           left: 500px;
           border-width: 0px;
+          
+          animation-name:grow-shrink;
       }
 
       #letter3 {
@@ -297,32 +300,114 @@ body {
           left: 100px;
           background-color: #eaff00;
           border-width: 0px;
+        
       }
+
+      #letter4:hover {
+        animation-name: transform;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+    
 
       #letter5 {
           top: 1250px;
           left: 300px;
+          width: 280px;
+        height: 500px;
+        background: url(aaa_cat.png) center center;
           clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
           border-width: 20px;
+          transition: 0.4s cubic-bezier(1, -1, 1, 1);
+  
     
           
       }
 
       #letter5:hover {
-        opacity: 0.5;
-        transition: 0.1s ease;
+        opacity: 1;
+        transition: 0.3s ease;
         background: url(aaa_cat.png) center center;
-        background-size:contain;
-        clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
-      
+        background-size:cover;
+        clip-path: polygon(10% 19%, 0 50%, 100% 76%);
+      }
 
-}
+        @keyframes myAnimation {
+      0%   {background-color:rgb(0, 0, 0); left:0px; top:0px;}
+      25%  {background-color:eaff00; left:200px; top:0px;}
+      50%  {background-color:rgb(0, 0, 0); left:400px; top:200px;}
+      100% {background-color:eaff00; left:0px; top:0px;}
+        }
+    
+      @keyframes grow-shrink {
+        25%,
+        100% {
+          scale: 10%;
+        }
+
+        50% {
+          scale: 200%;
+
+        }
+      }
+      #letter2 {
+        animation-duration: 1s;
+        animation-name: slide-in-vertical;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      #letter3:hover {
+        display: inline-block;
+        animation-duration: 2s;
+        animation-name: grow-shrink;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      @keyframes slide-in-vertical {
+        from {
+          translate:  0 -100vh;
+          scale:1 2;
+        }
+
+        to {
+          translate: 0 130vh;
+          scale: 1 1;
+        }
+      }
+
+      @keyframes transform {
+        from {
+          translate:  100 -100vh;
+          scale:1 1;
+        }
+
+        to {
+          translate: 100 100vh;
+          scale: 1 5;
+        }
+      }
+
+
+     a {
+        color: rgb(202, 255, 97);
+      background-color:rgb(97, 105, 255) ;
+      transform: rotate(30deg);
+     font-family: "Cossette Texte", sans-serif;
+      font-size: var(--weight);
+      width: 100px;
+      margin:0px;
+      }
+
 
 
 
     </style>
   </head>
   <body>
+    <a href="./exercise05_demo.html">demo↘︎</a>
+
     <div id="letter1" class="parent">
       <div class="left"></div>
       <div class="right"></div>

@@ -1,0 +1,151 @@
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>AAACAT</title>
+    <style>
+      .parent {
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          left: 400px;
+          /*border: solid 3px black;*/
+          flex-direction: column;
+          justify-content: space-between;
+      }
+      .child {
+        height: 0px;
+        right: 200px;
+        background-color: #eaff00;
+        /* margin-bottom: 170px; */
+        
+      }
+      .left {
+        width: 25px;
+        height: 300px;
+        transform: skew(-20deg);
+        position: absolute;
+    
+      }
+
+      .right {
+        width: 40px;
+        height: 300px;
+        left:200px;
+        transform: skewX(20deg);
+        position: absolute;
+       
+      }
+
+      .horizontal {
+        width: 180px;
+        height: 20px;
+        left:80px;
+        top:160px;
+        transform: skewX(-30deg);
+        position: absolute;
+
+      }
+        
+
+      #letter1 {
+        /*location*/
+          top: 10px;
+          left: 500px;
+          transform: rotate(-70deg);
+          
+      }
+
+      
+      #letter2 {
+          top: 20px;
+          left: 150px;
+    
+      }
+
+      #letter3 {
+          top: 300px;
+          left: 400px;
+        
+          transform: rotate(50deg);
+      }
+
+
+       a {
+        width: 280px;
+        height: 500px;
+        background: url(aaa_cat.png) center center;
+        background-size:contain;
+        transition: 0.4s cubic-bezier(1, -1, 1, 1);
+        clip-path: polygon(40% 10%, 0% 100%, 200% 300%);
+            }
+            
+            a:hover {
+        clip-path: polygon(10% 19%, 0 50%, 100% 76%);
+            }
+
+      
+       /* div {
+        width: 280px;
+        height: 500px;
+        background: url(aaa_cat.png) center center;
+        background-size:contain;
+        transition: 0.4s cubic-bezier(1, -1, 0, 1);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+        div:hover {
+        clip-path: polygon(50% 50%, 0 76%, 100% 76%);
+        } 
+       
+
+
+        .parent {
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          left: 400px;
+          border: solid 3px black;
+          flex-direction: column;
+          justify-content: space-between;
+      } 
+*/
+
+
+    </style>
+  </head>
+  <body>
+
+    <div id="letter1" class="parent">
+      <a class="child left"></a>
+      <a class="child right"></a>
+      <a class="child horizontal"></a>
+    </div>
+
+    <div id="letter2" class="parent">
+      <a class="child left"></a>
+      <a class="child right"></a>
+      <a class="child horizontal"></a>
+    </div>
+
+    <div id="letter3" class="parent">
+        <div class="child left"></div>
+        <div class="child right"></div>
+        <div class="child horizontal"></div>
+      </div>
+  
+
+    
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
